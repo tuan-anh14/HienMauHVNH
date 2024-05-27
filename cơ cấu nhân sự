@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="stylesheet1.css"> 
+    </head>
+    <body>
+        <div class="header">
+            <ul class="nav-list">
+                <li class="nav-item">Trang chu</li>
+                <li class="nav-item">Chuung toi la ai</li>
+                <li class="nav-item">Pinkstorm</li>
+                <li class="nav-item">khong biet nua</li>
+            </ul>
+            <ul class="nav-list">
+                <li class="nav-item">Dang ky</li>
+                <li class="nav-item">Dang nhap</li>
+            </ul>
+
+        </div>
+
+        <div class="box1">
+        <div class="colum-layout">
+        <h1>  Chúng tôi là ai </h1>
+        <p>
+            Mỗi thành viên là một mảnh ghép tạo nên đội máu ngân hàng
+        </p>
+        </div>
+        </div>
+        <div class="box2">
+            <div class="chanchu">
+
+              ảnh  
+             </div>
+        </div>
+
+        <div class="box2">
+            <div class="chanchu">
+            <h1>Ban lãnh đạo</h1>
+            <p>Những người giữ vị trí quan trọng trong hội</p>
+                 </div>
+        </div>
+        <div class="box2">
+            <div class="chanchu">
+                ảnh </div>
+        </div>
+        <div class="box2">
+            <div class="chanchu">
+                ảnh </div>
+        </div>
+    </body>
+</html>
