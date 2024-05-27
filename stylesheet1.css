@@ -12,17 +12,17 @@ html, body {
     justify-content: space-between;
 }
 .box1 {
-    /* width: 100px;Chiều rộng của hộp */
-    height: 600px; /* Chiều cao của hộp */
+    /* width: 100px; */
+    height: 600px;
     color: rgb(255, 255, 255);
-    display: flex; /* Hiển thị các hộp cạnh nhau */
+    display: flex;
     align-items: center;
     background-color: rgb(255, 255, 255);
     background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4HQjs?ver=f9ce&q=90&m=6&h=609&w=1083&b=%23FFFFFFFF&l=f&o=t&x=1680&y=436&aim=true);
     box-sizing: border-box;
     margin: 50px;
     background-size: cover;
-    overflow: hidden; /* Ẩn bất kỳ nội dung nào vượt ra khỏi khung */
+    overflow: hidden; 
 
 }
 .colum-layout {
