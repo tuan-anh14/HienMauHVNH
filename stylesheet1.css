@@ -12,17 +12,17 @@ html, body {
     justify-content: space-between;
 }
 .box1 {
-    /* width: 100px; */
-    height: 600px;
+    /* width: 100px;Chiều rộng của hộp */
+    height: 600px; /* Chiều cao của hộp */
     color: rgb(255, 255, 255);
-    display: flex;
+    display: flex; /* Hiển thị các hộp cạnh nhau */
     align-items: center;
     background-color: rgb(255, 255, 255);
     background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4HQjs?ver=f9ce&q=90&m=6&h=609&w=1083&b=%23FFFFFFFF&l=f&o=t&x=1680&y=436&aim=true);
     box-sizing: border-box;
     margin: 50px;
     background-size: cover;
-    overflow: hidden; 
+    overflow: hidden; /* Ẩn bất kỳ nội dung nào vượt ra khỏi khung */
 
 }
 .colum-layout {
@@ -53,7 +53,75 @@ html, body {
     display: inline-block;
 }
 .chanchu{
-    color: ;
     margin-top: 170px;
     flex: 1;
 }
+.box3{
+    height: 500px;
+    background-color: beige;
+    justify-content: center;
+    display:block
+}
+.box3 .chaos{
+    padding: 50px;
+    text-align: center;
+}
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    background-color: #fff;
+    border: #777;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    box-sizing: border-box;
+  }
+  
+  .profile-picture {
+    width: 100%;
+    margin-top: 0;
+    background-size: cover;
+  }
+  
+  .profile-name {
+    font-size: 22px;
+    color: #333;
+    margin: 20px 0 5px;
+  }
+  
+  .profile-role {
+    font-size: 16px;
+    color: #777;
+  }
+  .box4{
+    height: 300px;
+    padding-top: 50px;
+    background-color: beige;
+    justify-content: center;
+    display:flex
+}
+.profile-picture1{
+    width: 300px;
+    height: 220px;
+    background-image: url('New folder/nguyenthihuyentrang.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.profile-picture0{
+    width: 300px;
+    height: 220px;
+    background-image: url('New folder/phamthaoanh.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.profile-picture2{
+    width: 300px;
+    height: 220px;
+    background-image: url('New folder/nguyenvuquynhanh.jpg');
+    background-position: bottom center;
+    background-size: 360px;
+}
+
+
+
