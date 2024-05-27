@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="stylesheet1.css"> 
+        <link rel="stylesheet" type="text/css" href="stylesheet1.css"> <!-- Liên kết với tệp CSS -->
     </head>
     <body>
         <div class="header">
@@ -35,7 +35,7 @@
 
         <div class="box2">
             <div class="chanchu">
-            <h1>Ban lãnh đạo</h1>
+            <h1>Ban lanh dao</h1>
             <p>Những người giữ vị trí quan trọng trong hội</p>
                  </div>
         </div>
@@ -47,5 +47,29 @@
             <div class="chanchu">
                 ảnh </div>
         </div>
+        <div class="box3">
+            <h1 class="chaos">Ban lãnh đạo</h1>
+            <div class="profile-card">
+                <div class="profile-picture0"></div>
+                <div class="profile-name">Phạm Thảo Anh</div>
+                <div class="profile-role">Chủ nhiệm</div>
+              </div>
+            
+        </div>
+        <div class="box4">
+            <div class="profile-card">
+                <div class="profile-picture1"></div>
+                <div class="profile-name">Nguyễn Thị Huyền Trang</div>
+                <div class="profile-role">Phó chủ nhiệm</div>
+              </div>
+
+              <div class="profile-card">
+                <div class="profile-picture2"></div>
+                <div class="profile-name">Nguyễn Vũ Quỳnh Anh</div>
+                <div class="profile-role">Phó chủ nhiệm</div>
+              </div>
+        </div>
+        <div class="box4"></div>
+
     </body>
 </html>
