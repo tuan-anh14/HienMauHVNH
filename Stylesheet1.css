@@ -1,0 +1,586 @@
+html, body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url(Anh/bulubala.png);
+    background-attachment: fixed;
+    background-size: auto 100%;
+
+}
+.header{
+    width: 100%;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0);
+    color: aqua;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.trangchu{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    list-style: none;
+    margin: 0 8px;
+    display: inline-block;
+    cursor: pointer;
+}
+.trangchu:hover{
+    color: red;
+    list-style: none;
+    margin: 0 8px;
+    display: inline-block;
+}
+.box1 {
+    /* width: 100px;Chiều rộng của hộp */
+    margin-top: 0px;
+    height:850px; /* Chiều cao của hộp */
+    color: rgb(0, 0, 0);
+    display: flex; /* Hiển thị các hộp cạnh nhau */
+    background-color: rgba(255, 255, 255, 0);
+    background-image:  linear-gradient(to right, #000000,transparent),url(Anh/alllin.jpg);
+    box-sizing: border-box;
+    background-size: cover;
+    overflow: hidden; /* Ẩn bất kỳ nội dung nào vượt ra khỏi khung */
+    background-position: bottom center;
+    padding-left: 100px;
+    /*opacity: 0.9;*/
+}
+.box16{
+    width: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.colum-layout {
+        color: #f0f0f0;
+        display: block;
+        font-size: 25px; /* Thêm kích cỡ chữ */
+        text-align:justify;
+}
+.colum-layout1 {
+    color:  #f0f0f0;
+    display: block;
+    font-size: 20px; /* Thêm kích cỡ chữ */
+    text-align:justify;
+}
+
+.box2{
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0);
+    margin-left: 75px;
+    margin-bottom: 50px;
+    display: inline-block;
+    vertical-align: bottom;
+    padding: 20px;
+    box-sizing: border-box;
+    background-size: cover;
+}
+.box12{
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.box13{
+    margin-top: 20px;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0);
+    display:flex;
+    flex-direction: column;
+}
+.box14{
+    flex:2;
+    background-color: rgba(255, 255, 255, 0);
+}
+.box15{
+    flex:1;
+    background-color: rgba(255, 255, 255, 0);
+    padding-left: 20px;
+
+}
+.nav-list {
+    padding-left: 0;
+    margin: auto 16px;
+}
+.nav-item{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    list-style: none;
+    margin: 0 8px;
+    display: inline-block;
+    cursor: pointer;
+}
+.box3{
+
+    background-color: rgba(255, 255, 255, 0);
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+    margin: 20px; 
+    padding: 50px;
+
+    border-top: 2px solid rgba(255, 255, 255, 0);
+
+}
+.chaos{
+    color:#f0f0f0;
+    padding: 20px;
+    text-align: center;
+    margin: 5px;
+}
+
+  
+  .profile-picture {
+    width: 100%;
+    margin-top: 0;
+    background-size: cover;
+  }
+  
+  .profile-name {
+    font-size: 22px;
+    color: #333;
+    margin: 20px 0 5px;
+  }
+  
+  .profile-role {
+    font-size: 16px;
+    color: #777;
+  }
+  .box4{
+    height: 300px;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0);
+    justify-content: center;
+    display:flex
+
+}
+.profile-picture1{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/nguyenthihuyentrang.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.profile-picture0{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/phamthaoanh.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.profile-picture2{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/nguyenvuquynhanh.jpg');
+    background-position: bottom center;
+    background-size: 360px;
+}
+.box5{
+    height: 100px;
+    color:#f0f0f0;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    border-top: 2px solid rgba(255, 255, 255, 0.704);
+}
+
+.box8{ 
+    height: 380px;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0);
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+}
+.box7{ 
+
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    justify-content: center;
+    display:flex;
+    padding-bottom: 40px;
+
+
+}
+.box6{ 
+    height: 380px;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0);
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+}
+.box9{
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0);
+    justify-content: center;
+    height: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-top: 2px solid rgba(34, 32, 32, 0.2);
+}
+.box9 .bals{
+    color:#f0f0f0;
+    text-align: center;
+    margin: 30px;
+}
+.box10{
+    flex: 4;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.vuthidung{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/vuthidung.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.nguyenthuyduong{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/nguyenthuyduong.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.buidieulinh{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/buidieulinh.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.trandiemquynh{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/trandiemquynh.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.nguyenthimytam{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/nguyenthimytam.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.nguyenthihatrang{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/nguyenthihatrang.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+
+.vukimngan{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/vukimngan.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.phamthutrang{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/phamthutrang.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.truongthihieuphuong{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/truongthihieuhuong.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.truongthihaiyen{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/truongthihaiyen.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.vuthiphuonglan{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/vuthiphuonglan.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.tranthihuonggiang{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/tranthihuonggiang.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.doanthikimoanh{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/doanthikimoanh.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.phungthiphuonganh{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/phungthiphuonganh.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.nguyenmanhchung{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/nguyenmanhchung.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.nguyenkhanhlinh{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/nguyenkhanhlinh.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.box11{ 
+    height: 450px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+}
+.buitranthaoly{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/buitranthaoly.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.nguyentuanh{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/nguyentuanh.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.nguyenhaiyen{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/nguyenhaiyen.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+
+.nguyenthivananh{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/nguyenthivananh.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.lathuyvy{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/lathuyvi.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.nguyenthimai{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/nguyenthimai.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.nguyenvuquynhanh{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/nguyenvuquynhanh.jpg');
+    background-position: bottom center;
+    background-size: 360px;
+}
+.nguyenhuonggiang{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/nguyenhuonggian.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.duongthithuong{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/duongthihuong.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.nguyennhatthuylinh{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/nguyennhatthuylinh.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+.nguyenthihuyentrang{
+    width: 300px;
+    height: 220px;
+    background-image: url('Anh/nguyenthihuyentrang.jpg');
+    background-position: bottom center;
+    background-size: 350px;
+}
+/*.nguyenthihuyentrangg {
+    display: none; /* initially hidden */
+ /* }
+  
+ /* .nguyenthihuyentrang :hover + .nguyenthihuyentrangg  {
+    display: block; }/* show when box1 is hovered */ 
+  
+
+.line{
+    padding: 12px 16px;
+    margin: 16px;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    border: #777;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    box-sizing: border-box;
+  }
+
+.snip1584 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    border: #777;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    position: relative;
+    color: #ffffff;
+    margin: auto;
+}
+
+.snip1584 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.snip1584:before {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  top: 100%;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+
+.snip1584 img {
+  vertical-align: top;
+  max-width: 100%;
+  backface-visibility: hidden;
+}
+
+.snip1584 figcaption {
+ 
+    position: absolute;
+    top: 20px; /* Đặt vị trí từ trên xuống 10px */
+    left: 10px; /* Đặt vị trí từ trái sang 10px */
+    z-index: 1;
+    align-items: flex-start; /* Căn lề trái */
+    justify-content: flex-start; /* Căn lề trên */
+  }
+
+.snip1584 h3,
+.snip1584 h5,
+.snip1584 h6 { /* Thêm h6 */
+  margin: 10px;
+  opacity: 0;
+  letter-spacing: 1px;
+
+}
+
+.snip1584 h3 {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  text-transform: uppercase;
+  font-weight: 400;
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+  margin-bottom: 5px;
+}
+
+.snip1584 h5 {
+  font-weight: normal;
+  background-color: #ae895d;
+  padding: 3px 10px;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.snip1584 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.snip1584:hover:before,
+.snip1584.hover:before {
+  top: 10px;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.snip1584:hover h3,
+.snip1584.hover h3,
+.snip1584:hover h5,
+.snip1584.hover h5,
+.snip1584:hover h6, /* Thêm h6 */
+.snip1584.hover h6 { /* Thêm h6 */
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.snip1584:hover h3,
+.snip1584.hover h3 {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+.snip1584:hover h5,
+.snip1584.hover h5 {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
