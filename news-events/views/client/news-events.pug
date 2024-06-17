@@ -11,20 +11,26 @@ html(lang="en")
     // Bootstrap CSS
     link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
     // Custom CSS
-    link(rel="stylesheet" href="./css/news-events.css")
-    link(rel="stylesheet" href="../css/reset.css")
+    link(rel="stylesheet" href="/css/news-events.css")
+    link(rel="stylesheet" href="/css/reset.css")
   body
     .container-fluid.bg-danger.text-white.text-center.p-3.mb-5.fixed-top
       h4.mb-0 News - Events
     .container.mt-5.pt-5
       .row.mb-3
-        .col-12.d-flex.flex-wrap.justify-content-center
-          .options-container
+        .col-12.d-flex.flex-wrap.justify-content-center.options-container
+          each option in options
+            button.option= option
       .row
-        .col-12
-          .container
+        each news in newsList
+          .col-md-6.mb-4
+            .news-card
+              img(src=news.thumbnail alt=news.title)
+              .news-content
+                h5.news-title= news.title
+                p.news-description= news.description
+                a.view-button(href=news.link) View More
     // JS
     script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
     script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js")
     script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")
-    script(src="./js/script.js")
