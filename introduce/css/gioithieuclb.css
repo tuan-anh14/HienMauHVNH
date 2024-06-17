@@ -359,7 +359,7 @@ html, body {
 /* THÔNG TIN CHI TIẾT */
 
 section.upcoming-meetings {
-  background-image: url(../images/back_space.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../team/images/bulubala.png);
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;

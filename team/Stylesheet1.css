@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url(Anh/bulubala.png);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url(./images/bulubala.png);
     background-attachment: fixed;
     background-size: auto 100%;
 
@@ -40,7 +40,7 @@ html, body {
     color: rgb(0, 0, 0);
     display: flex; /* Hiển thị các hộp cạnh nhau */
     background-color: rgba(255, 255, 255, 0);
-    background-image:  linear-gradient(to right, #000000,transparent),url(Anh/alllin.jpg);
+    background-image:  linear-gradient(to right, #000000,transparent),url(./images/alllin.jpg);
     box-sizing: border-box;
     background-size: cover;
     overflow: hidden; /* Ẩn bất kỳ nội dung nào vượt ra khỏi khung */
@@ -164,21 +164,21 @@ html, body {
 .profile-picture1{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/nguyenthihuyentrang.jpg');
+    background-image: url('./images/nguyenthihuyentrang.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .profile-picture0{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/phamthaoanh.jpg');
+    background-image: url('./images/phamthaoanh.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .profile-picture2{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/nguyenvuquynhanh.jpg');
+    background-image: url('./images/nguyenvuquynhanh.jpg');
     background-position: bottom center;
     background-size: 360px;
 }
@@ -242,42 +242,42 @@ html, body {
 .vuthidung{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/vuthidung.jpg');
+    background-image: url('./images/vuthidung.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .nguyenthuyduong{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/nguyenthuyduong.jpg');
+    background-image: url('./images/nguyenthuyduong.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .buidieulinh{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/buidieulinh.jpg');
+    background-image: url('./images/buidieulinh.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .trandiemquynh{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/trandiemquynh.jpg');
+    background-image: url('./images/trandiemquynh.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .nguyenthimytam{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/nguyenthimytam.jpg');
+    background-image: url('./images/nguyenthimytam.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .nguyenthihatrang{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/nguyenthihatrang.jpg');
+    background-image: url('./images/nguyenthihatrang.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
@@ -285,70 +285,70 @@ html, body {
 .vukimngan{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/vukimngan.jpg');
+    background-image: url('./images/vukimngan.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .phamthutrang{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/phamthutrang.jpg');
+    background-image: url('./images/phamthutrang.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .truongthihieuphuong{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/truongthihieuhuong.jpg');
+    background-image: url('./images/truongthihieuhuong.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .truongthihaiyen{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/truongthihaiyen.jpg');
+    background-image: url('./images/truongthihaiyen.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .vuthiphuonglan{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/vuthiphuonglan.jpg');
+    background-image: url('./images/vuthiphuonglan.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .tranthihuonggiang{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/tranthihuonggiang.jpg');
+    background-image: url('./images/tranthihuonggiang.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .doanthikimoanh{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/doanthikimoanh.jpg');
+    background-image: url('./images/doanthikimoanh.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .phungthiphuonganh{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/phungthiphuonganh.jpg');
+    background-image: url('./images/phungthiphuonganh.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .nguyenmanhchung{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/nguyenmanhchung.jpg');
+    background-image: url('./images/nguyenmanhchung.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .nguyenkhanhlinh{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/nguyenkhanhlinh.jpg');
+    background-image: url('./images/nguyenkhanhlinh.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
@@ -363,21 +363,21 @@ html, body {
 .buitranthaoly{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/buitranthaoly.jpg');
+    background-image: url('./images/buitranthaoly.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .nguyentuanh{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/nguyentuanh.jpg');
+    background-image: url('./images/nguyentuanh.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .nguyenhaiyen{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/nguyenhaiyen.jpg');
+    background-image: url('./images/nguyenhaiyen.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
@@ -385,56 +385,56 @@ html, body {
 .nguyenthivananh{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/nguyenthivananh.jpg');
+    background-image: url('./images/nguyenthivananh.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .lathuyvy{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/lathuyvi.jpg');
+    background-image: url('./images/lathuyvi.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .nguyenthimai{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/nguyenthimai.jpg');
+    background-image: url('./images/nguyenthimai.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .nguyenvuquynhanh{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/nguyenvuquynhanh.jpg');
+    background-image: url('./images/nguyenvuquynhanh.jpg');
     background-position: bottom center;
     background-size: 360px;
 }
 .nguyenhuonggiang{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/nguyenhuonggian.jpg');
+    background-image: url('./images/nguyenhuonggian.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .duongthithuong{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/duongthihuong.jpg');
+    background-image: url('./images/duongthihuong.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .nguyennhatthuylinh{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/nguyennhatthuylinh.jpg');
+    background-image: url('./images/nguyennhatthuylinh.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
 .nguyenthihuyentrang{
     width: 300px;
     height: 220px;
-    background-image: url('Anh/nguyenthihuyentrang.jpg');
+    background-image: url('./images/nguyenthihuyentrang.jpg');
     background-position: bottom center;
     background-size: 350px;
 }
