@@ -1,5 +1,5 @@
-const newsEventsRoutes = require("./news-events.router")
+const newsEventsRoutes = require('./news-events.router');
 
 module.exports = (app) => {
-    app.use("/", newsEventsRoutes)
-}
+    app.use('/', newsEventsRoutes);
+};

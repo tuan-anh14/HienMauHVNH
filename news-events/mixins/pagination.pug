@@ -1,0 +1,13 @@
+mixin pagination(pagination)
+  if pagination.currentPage > 1
+    ul(class="pagination")
+      li(class="page-item")
+        button(class="page-link" onclick=`goToPage(${pagination.currentPage - 1})`) Previous
+
+  each page in pagination.pages
+    li(class="page-item")
+      button(class="page-link" onclick=`goToPage(${page})`) #{page}
+
+  if pagination.currentPage < pagination.totalPage
+    li(class="page-item")
+      button(class="page-link" onclick=`goToPage(${pagination.currentPage + 1})`) Next

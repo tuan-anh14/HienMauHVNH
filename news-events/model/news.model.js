@@ -1,18 +1,16 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const newsSchema = new mongoose.Schema(
-    {
-      title: String,
-      description: String,
-      thumbnail: String,
-      status: String,
-      position: Number,
-      deleted: false
-}
-)
+const newsSchema = new mongoose.Schema({
+    title: String,
+    link: String,
+    description: String,
+    content: String,
+    thumbnail: String,
+    status: String,
+    position: Number,
+    deleted: Boolean
+});
 
-  
-  const New = mongoose.model("New", newsSchema, "news");
-  
-  module.exports = New;
-  
+const New = mongoose.model('New', newsSchema);
+
+module.exports = New;

@@ -1,8 +1,7 @@
-const express = require("express");
-const route =express.Router()
+const express = require('express');
+const router = express.Router();
+const newsEventsController = require('../../controllers/client/news-events.controller');
 
-route.get("/", (req,res) => {
-  res.render("client/news-events")
-})
+router.get('/', newsEventsController.index);
 
-module.exports = route
+module.exports = router;
