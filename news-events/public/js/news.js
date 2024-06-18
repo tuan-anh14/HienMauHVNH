@@ -1,21 +1,26 @@
-const paginationHelper = require("../../helpers/pagination");
+// news.js
 
-
-function toggleDetails(id) {
-    var details = document.getElementById(id);
-    if (details.style.display === "none" || details.style.display === "") {
-        details.style.display = "block";
-    } else {
-        details.style.display = "none";
+document.addEventListener('DOMContentLoaded', () => {
+    // Pagination
+    const buttonsPagination = document.querySelectorAll("[data-pagination]");
+    if(buttonsPagination) {
+      let url = new URL(window.location.href);
+  
+      buttonsPagination.forEach(button => {
+        button.addEventListener("click", () => {
+          const page = button.getAttribute("data-pagination");
+          url.searchParams.set("page", page);
+          window.location.href = url.href;
+        });
+      });
     }
-}
-
-// Assuming this is within an asynchronous function
-const countNews = await New.countDocuments(find);
-
-const objectPagination = paginationHelper({
-  currentPage: 1,
-  limitItems: 4,
-}, req.query, countNews);
-
-res.render('client/news-events', { news: newsData, pagination: objectPagination });
+  
+    // Toggle Details
+    window.toggleDetails = function(id) {
+      const detailsElement = document.getElementById(id);
+      if (detailsElement) {
+        detailsElement.classList.toggle('show');
+      }
+    }
+  });
+  

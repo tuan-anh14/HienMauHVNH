@@ -152,3 +152,57 @@ header nav ul li a:hover {
 .register-link {
   color: #007bff;
 }
+
+
+/* news-events.css */
+.newsDetails {
+  display: none;
+}
+
+.newsDetails.show {
+  display: block;
+}
+
+
+/* news-events.css */
+
+.pagination {
+  margin-top: 20px; /* Khoảng cách từ phần trên xuống */
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.pagination .page-item {
+  margin-right: 5px; /* Khoảng cách giữa các nút pagination */
+}
+
+.pagination .page-item:last-child {
+  margin-right: 0;
+}
+
+.pagination .page-link {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #007bff; /* Màu chữ cho nút pagination */
+  padding: 8px 12px; /* Kích thước của nút pagination */
+  border-radius: 5px; /* Độ cong viền của nút pagination */
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
+}
+
+.pagination .page-link:hover {
+  text-decoration: none;
+  background-color: #f8f9fa; /* Màu nền khi hover */
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  color: white;
+}
+
+.pagination .page-link:focus {
+  outline: none;
+  box-shadow: none;
+}
