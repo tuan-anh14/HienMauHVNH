@@ -6,33 +6,38 @@
 <title>Sự kiện đồng hành</title>
 <style>
     body {
-        margin: 0;
+      margin-left: 300px;
+        background-attachment: fixed;
+
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
         font-family: Arial, sans-serif;
-        background-color: #f0f0f0; /* Màu nền cho trang */
+        background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url(../team/images/bulubala.png);
     }
+
     .content {
+        margin:50px;
         max-width: 800px;
         padding: 20px;
         line-height: 1.8;
         text-align: justify; /* Căn đều nội dung */
-        background-color: #fff; /* Màu nền cho nội dung */
+        background-color: #ffffff00; /* Màu nền cho nội dung */
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho nội dung */
         border-radius: 10px; /* Bo góc cho nội dung */
+        color:#fff;
     }
     .content h1 {
-        color: #160851;
+        color: #e4e4e4;
         text-align: center;
     }
     .content h2 {
-        color: #110b6a;
+        color: #ffffff;
         text-align: center;
     }
     .content p {
-        color: #343232;
+        color: #ffffff;
         margin-bottom: 15px;
     }
     .content img {
@@ -65,6 +70,173 @@
 </style>
 </head>
 <body>
+    <style>
+        header {
+
+width: 100%;
+background-color: rgba(0, 0, 0, 0.745);
+position: fixed;
+z-index: 2;
+padding-left: 250px;
+padding-right: 250px;
+top: 0; /* Đảm bảo header nằm ở đầu trang */
+left: 0; /* Đảm bảo header không tràn ra ngoài về phía bên trái */
+right: 0; /* Đảm bảo header không tràn ra ngoài về phía bên phải */
+box-sizing: border-box;
+}
+
+header .container {
+display: flex;
+justify-content: space-between;
+}
+
+header .container .logo{
+padding: 15px;
+padding-top: 20px;
+height: 30px;
+}
+
+header .container .logo img{
+height: 100%;
+padding-bottom: 30px;
+}
+
+header nav ul{
+list-style-type: none;
+margin:0px;
+}
+
+header nav ul li{
+display: inline-block;
+margin:0px;
+
+}
+
+header nav ul li  a{
+margin:0px;
+
+display: inline-block;
+height: 75px;
+line-height:75px;
+padding: 0 15px;
+text-decoration: none;
+text-transform: capitalize;
+font-size: 16px;
+color: #fff;
+transition: 0.3s;
+
+
+}
+
+header nav ul li a:hover {
+background-color: rgb(213, 47, 47);
+}
+ </style>
+ <header>
+     <div class="container">
+       <div class="logo">
+         <img src="../home/images/logo.png" alt="NGO logo" /> 
+       </div>
+
+       <nav>
+         <ul>
+           <li>
+             <a href="../home/home.html">Trang chủ</a>
+           </li>
+           <li>
+             <a href="../introduce/gioithieuclb.html">Giới thiệu</a>
+           </li>
+           <li>
+             <a href="../home/home.html">News - events</a>
+           </li>
+           <li>
+             <a href="./pink-storm/pink_storm_23.html">Pink Storm</a>
+           </li>
+           <li>
+             <a href="../team/index.html">Cơ cấu nhân sự</a>
+           </li>
+         </ul>
+       </nav>
+     </div>
+   </header>
+   <style>
+    .custombox1 {
+      top:0;
+      left: 0;
+        width: 250px;
+        height:100%;
+        background-color: #ffffff00;
+        padding-right: 200px;
+        position: fixed;
+        display:flex;
+        flex-direction: column;
+    
+    }
+    .custombox11{
+      flex:1;
+      background-color: rgba(0, 0, 0, 0.6);
+      margin:px;
+      height: 50px;
+    
+    }
+    .custombox11:hover{
+      background-color: rgba(0, 0, 0, 0);
+    }
+    .cta-link {
+            display: inline-block;
+            background-color: #1f025600;
+            color: #fff;
+            text-decoration: none;
+    
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+          </style>
+    
+      <div class="custombox1">
+        <div class="custombox11"> 
+          <p style="text-align: center;"><a class="cta-link" href="./pink_storm_23.html">        </a></p>
+        </div>
+        <div class="custombox11"> 
+          <p style="text-align: center;"><a class="cta-link" href="./pink_storm_23.html">        </a></p>
+        </div>
+        <div class="custombox11" > 
+          <p style="text-align: center;"><a class="cta-link" href="./pink_storm_23.html">Pink Storm XXIII</a></p>
+        </div>
+        <div class="custombox11"> 
+          <p style="text-align: center;"><a class="cta-link" href="./ra_quan_tuyen_pink23.html">Pink Storm Trở lại</a></p>
+        </div>
+        <div class="custombox11"> 
+          <p style="text-align: center;"><a class="cta-link" href="./sự_kiện_đồng hành_pink23.html">Sự kiện đồng hành </a></p>
+        </div>
+        <div class="custombox11"> 
+          <p style="text-align: center;"><a class="cta-link" href="./thư_mời_Pink23.html">Thư mời</a></p>
+        </div>
+        <div class="custombox11"> 
+          <p style="text-align: center;"><a class="cta-link" href="./tổng_kết_PS23.html">Tổng kết </a></p>
+        </div>
+        <div class="custombox11"> 
+          <p style="text-align: center;"><a class="cta-link" href="./trang_trí.html">Chuẩn bị</a></p>
+        </div>
+        <div class="custombox11"> 
+          <p style="text-align: center;"><a class="cta-link" href="./tri_ân_NHM.html">Tri ân NHM</a></p>
+        </div>
+        <div class="custombox11"style="background-color: #f0f0f000"> 
+          <p style="text-align: center;"><a class="cta-link" href="./BBC_LENS_LUCKY.html">BBC LENS LUCKY</a></p>
+        </div>
+        <div class="custombox11"> 
+          <p style="text-align: center;"><a class="cta-link" href="./BBC_LENS_ONLY.html">BBC LENS ONLY</a></p>
+        </div>
+        <div class="custombox11"> 
+          <p style="text-align: center;"><a class="cta-link" href="./BBC_LENS_SKY.html">BBC LENS SKY</a></p>
+        </div>
+        <div class="custombox11"> 
+          <p style="text-align: center;"><a class="cta-link" href="./BBC_LENS_SUNSHINE.html">BBC LENS SUNSHINE</a></p>
+        </div>
+        <div class="custombox11"> 
+          <p style="text-align: center;"><a class="cta-link" href="./pink_storm_23.html">      </a></p>
+        </div>
+      </div>
     <div class="content">
         <h1> LUCKY STARS: CHẶNG ĐƯỜNG MÙA HẠ</h1>
         <h2>SỰ KIỆN ĐỒNG HÀNH - BBC LENS: HƯƠNG VỊ MÙA HÈ </h2>
@@ -96,11 +268,7 @@
             <ul>Em đây muốn đi “bão hồng” cùng anh"</ul></i>
         </p>
           <h3>🍄 Bàn trực đã sẵn sàng, Lucky Stars mời mọi người tới nha!</h3>
-        <div class="navigation">
-            <a href="sự_kiện_đồng hành_pink23.html" style="order: 1;">BBC LENS</a>
-            <a href="BBC_LENS_SKY.html" style="order: 2;">Trang sau</a>
-            <p style="text-align: center;"><a href="pink_storm_23.html">PINK STORM XXIII</a></p>
-        </div>
+
     </div>
 </body>
 </html>

@@ -6,33 +6,95 @@
     </head>
     <body onscroll="scrollFunction()">
 
-      <header>
-        <div class="container">
-          <div class="logo">
-            <img src="/home/images/logo.png" alt="NGO logo" />
-          </div>
+      <style>
+        header {
 
-          <nav>
-            <ul>
-              <li>
-                <a href="/home/home.html">Trang chủ</a>
-              </li>
-              <li>
-                <a href="/introduce/gioithieuclb.html">Giới thiệu</a>
-              </li>
-              <li>
-                <a href="/home/home.html">News - events</a>
-              </li>
-              <li>
-                <a href="/pink-storm/pink_storm_23.html">Pink Storm</a>
-              </li>
-              <li>
-                <a href="/team/index.html">Cơ cấu nhân sự</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+width: 100%;
+background-color: rgba(0, 0, 0, 0.6);
+position: fixed;
+z-index: 2;
+padding-left: 250px;
+padding-right: 250px;
+top: 0; /* Đảm bảo header nằm ở đầu trang */
+left: 0; /* Đảm bảo header không tràn ra ngoài về phía bên trái */
+right: 0; /* Đảm bảo header không tràn ra ngoài về phía bên phải */
+box-sizing: border-box;
+}
+
+header .container {
+display: flex;
+justify-content: space-between;
+}
+
+header .container .logo{
+padding: 15px;
+padding-top: 20px;   
+height: 30px;
+}
+
+header .container .logo img{
+height: 100%;
+padding-bottom: 30px;
+}
+
+header nav ul{
+list-style-type: none;
+margin:0px;
+}
+
+header nav ul li{
+display: inline-block;
+margin:0px;
+
+}
+
+header nav ul li  a{
+margin:0px;
+
+display: inline-block;
+height: 75px;
+line-height:75px;
+padding: 0 15px;
+text-decoration: none;
+text-transform: capitalize;
+font-size: 16px;
+color: #fff;
+transition: 0.3s;
+
+
+}
+
+header nav ul li a:hover {
+background-color: rgb(213, 47, 47);
+}
+ </style>
+ <header>
+     <div class="container">
+       <div class="logo">
+         <img src="../home/images/logo.png" alt="NGO logo" />
+       </div>
+
+       <nav>
+         <ul>
+           <li>
+             <a href="../home/home.html">Trang chủ</a>
+           </li>
+           <li>
+             <a href="../introduce/gioithieuclb.html">Giới thiệu</a>
+           </li>
+           <li>
+             <a href="localhost:3000">News - events</a>
+           </li>
+           <li>
+             <a href="../pink-storm/pink_storm_23.html">Pink Storm</a>
+           </li>
+           <li>
+             <a href="/team/index.html">Cơ cấu nhân sự</a>
+           </li>
+         </ul>
+       </nav>
+     </div>
+   </header>
 
         <div class="box1">
           <div class="box16">
@@ -637,6 +699,6 @@
         </div>
 
 
-        <script src="move.js"></script>
+        <script src="./move.js"></script>
     </body>
 </html>
