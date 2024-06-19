@@ -6,29 +6,33 @@
     </head>
     <body onscroll="scrollFunction()">
 
-      <div class="header" id="header">
-          <ul class="nav-list">
-              <li class="trangchu">Trang chu</li>
-              <li class="nav-item">Chuung toi la ai</li>
-              <li class="nav-item">Pinkstorm</li>
-              <li class="nav-item">khong biet nua</li>
-          </ul>
-          <ul class="nav-list">
-              <li class="nav-item">Dang ky</li>
-              <li class="nav-item">Dang nhap</li>
-          </ul>
+      <header>
+        <div class="container">
+          <div class="logo">
+            <img src="/home/images/logo.png" alt="NGO logo" />
+          </div>
 
-      </div>
-      <script>
-        // When the user scrolls down 80px from the top of the document, change the background color of the header
-        function scrollFunction() {
-          if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-            document.getElementById("header").style.backgroundColor = "black";
-          } else {
-            document.getElementById("header").style.backgroundColor = "rgba(0, 0, 0, 0)";
-          }
-        }
-        </script>
+          <nav>
+            <ul>
+              <li>
+                <a href="/home/home.html">Trang chủ</a>
+              </li>
+              <li>
+                <a href="/introduce/gioithieuclb.html">Giới thiệu</a>
+              </li>
+              <li>
+                <a href="/home/home.html">News - events</a>
+              </li>
+              <li>
+                <a href="/pink-storm/pink_storm_23.html">Pink Storm</a>
+              </li>
+              <li>
+                <a href="/team/index.html">Cơ cấu nhân sự</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
         <div class="box1">
           <div class="box16">
