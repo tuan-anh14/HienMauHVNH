@@ -1,276 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sự kiện đồng hành</title>
-<style>
-    html, body {
-        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sự kiện đồng hành</title>
+  <style>
+    html,
     body {
-        margin-left: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background-attachment: fixed;
-        background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url(../team/images/bulubala.png);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
+
+    body {
+      margin-left: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-attachment: fixed;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../team/images/bulubala.png);
+    }
+
     .content {
-        margin-top: 50px;
+      margin-top: 50px;
 
-        max-width: 800px;
-        padding: 20px;
-        line-height: 1.8;
-        text-align: justify; /* Căn đều nội dung */
-        background-color: #ffffff00; /* Màu nền cho nội dung */
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho nội dung */
-        border-radius: 10px; /* Bo góc cho nội dung */
-        color:#fff;
+      max-width: 800px;
+      padding: 20px;
+      line-height: 1.8;
+      text-align: justify;
+      /* Căn đều nội dung */
+      background-color: #ffffff00;
+      /* Màu nền cho nội dung */
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      /* Đổ bóng cho nội dung */
+      border-radius: 10px;
+      /* Bo góc cho nội dung */
+      color: #fff;
     }
+
     .content h1 {
-        color: #f0f0f0;
-        text-align: center;
+      color: #f0f0f0;
+      text-align: center;
     }
+
     .content h2 {
-        color: #f0f0f0;
-        text-align: center;
+      color: #f0f0f0;
+      text-align: center;
     }
+
     .content p {
-        color: #f0f0f0;
-        margin-bottom: 15px;
+      color: #f0f0f0;
+      margin-bottom: 15px;
     }
+
     .content img {
-        width: 100%;
-        max-width: 100%;
-        margin-bottom: 15px;
-        border-radius: 8px; /* Bo góc cho hình ảnh */
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng cho hình ảnh */
-        transition: transform 0.3s ease-in-out;
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      /* Bo góc cho hình ảnh */
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      /* Đổ bóng cho hình ảnh */
+      transition: transform 0.3s ease-in-out;
     }
+
     .content img:hover {
-        transform: scale(1.05); /* Phóng to hình ảnh khi hover */
+      transform: scale(1.05);
+      /* Phóng to hình ảnh khi hover */
     }
+
     .navigation {
-        display: flex;
-        justify-content: space-between; /* Căn các phần tử theo hai bên */
-        margin-top: 20px;
-        padding-right: 100px;
+      display: flex;
+      justify-content: space-between;
+      /* Căn các phần tử theo hai bên */
+      margin-top: 20px;
+      padding-right: 100px;
     }
+
     .navigation a {
-        text-decoration: none;
-        padding: 10px 20px;
-        background-color: #06024f; /* Màu nền của nút */
-        color: #fff;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
+      text-decoration: none;
+      padding: 10px 20px;
+      background-color: #06024f;
+      /* Màu nền của nút */
+      color: #fff;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
     }
+
     .navigation a:hover {
-        background-color: #0f0448e8; /* Màu nền khi hover */
+      background-color: #0f0448e8;
+      /* Màu nền khi hover */
     }
-</style>
+  </style>
 </head>
+
 <body>
-    <style>
-        header {
+  <style>
+    header {
 
-width: 100%;
-background-color: rgba(0, 0, 0, 0.6);
-position: fixed;
-z-index: 2;
-padding-left: 250px;
-padding-right: 250px;
-top: 0; /* Đảm bảo header nằm ở đầu trang */
-left: 0; /* Đảm bảo header không tràn ra ngoài về phía bên trái */
-right: 0; /* Đảm bảo header không tràn ra ngoài về phía bên phải */
-box-sizing: border-box;
-}
-
-header .container {
-display: flex;
-justify-content: space-between;
-}
-
-header .container .logo{
-padding: 15px;
-padding-top: 20px;
-height: 30px;
-}
-
-header .container .logo img{
-height: 100%;
-padding-bottom: 30px;
-}
-
-header nav ul{
-list-style-type: none;
-margin:0px;
-}
-
-header nav ul li{
-display: inline-block;
-margin:0px;
-
-}
-
-header nav ul li  a{
-margin:0px;
-
-display: inline-block;
-height: 75px;
-line-height:75px;
-padding: 0 15px;
-text-decoration: none;
-text-transform: capitalize;
-font-size: 16px;
-color: #fff;
-transition: 0.3s;
-
-
-}
-
-header nav ul li a:hover {
-background-color: rgb(213, 47, 47);
-}
- </style>
- <header>
-     <div class="container">
-       <div class="logo">
-         <img src="../home/images/logo.png" alt="NGO logo" />
-       </div>
-
-       <nav>
-         <ul>
-           <li>
-             <a href="../home/home.html">Trang chủ</a>
-           </li>
-           <li>
-             <a href="../introduce/gioithieuclb.html">Giới thiệu</a>
-           </li>
-           <li>
-             <a href="localhost:3000">News - events</a>
-           </li>
-           <li>
-             <a href="/pink-storm/pink_storm_23.html">Pink Storm</a>
-           </li>
-           <li>
-             <a href="../team/index.html">Cơ cấu nhân sự</a>
-           </li>
-         </ul>
-       </nav>
-     </div>
-   </header>
-   <style>
-    .custombox1 {
-      top:0;
-      left: 0;
-        width: 250px;
-        height:100%;
-        background-color: #ffffff00;
-        padding-right: 200px;
-        position: fixed;
-        display:flex;
-        flex-direction: column;
-    
-    }
-    .custombox11{
-      flex:1;
+      width: 100%;
       background-color: rgba(0, 0, 0, 0.6);
-      margin:px;
-      height: 50px;
-    
+      position: fixed;
+      z-index: 2;
+      padding-left: 250px;
+      padding-right: 250px;
+      top: 0;
+      /* Đảm bảo header nằm ở đầu trang */
+      left: 0;
+      /* Đảm bảo header không tràn ra ngoài về phía bên trái */
+      right: 0;
+      /* Đảm bảo header không tràn ra ngoài về phía bên phải */
+      box-sizing: border-box;
     }
-    .custombox11:hover{
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    header .container .logo {
+      padding: 15px;
+      padding-top: 20px;
+      height: 30px;
+    }
+
+    header .container .logo img {
+      height: 100%;
+      padding-bottom: 30px;
+    }
+
+    header nav ul {
+      list-style-type: none;
+      margin: 0px;
+    }
+
+    header nav ul li {
+      display: inline-block;
+      margin: 0px;
+
+    }
+
+    header nav ul li a {
+      margin: 0px;
+
+      display: inline-block;
+      height: 75px;
+      line-height: 75px;
+      padding: 0 15px;
+      text-decoration: none;
+      text-transform: capitalize;
+      font-size: 16px;
+      color: #fff;
+      transition: 0.3s;
+
+
+    }
+
+    header nav ul li a:hover {
+      background-color: #e43a47;
+    }
+  </style>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="../home/images/logo.png" alt="NGO logo" />
+      </div>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="../home/home.html">Trang chủ</a>
+          </li>
+          <li>
+            <a href="../introduce/gioithieuclb.html">Giới thiệu</a>
+          </li>
+          <li>
+            <a href="localhost:3000">Tin tức - Sự kiện</a>
+          </li>
+          <li>
+            <a href="/pink-storm/pink_storm_23.html">Pink Storm</a>
+          </li>
+          <li>
+            <a href="../team/index.html">Cơ cấu nhân sự</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <style>
+    .custombox1 {
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background-color: #ffffff00;
+      padding-right: 200px;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .custombox11 {
+      flex: 1;
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: px;
+      height: 50px;
+
+    }
+
+    .custombox11:hover {
       background-color: rgba(0, 0, 0, 0);
     }
+
     .cta-link {
-            display: inline-block;
-            background-color: #1f025600;
-            color: #fff;
-            text-decoration: none;
-    
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-          </style>
-    
-      <div class="custombox1">
-        <div class="custombox11"> 
-          <p style="text-align: center;"><a class="cta-link" href="./pink_storm_23.html">        </a></p>
-        </div>
-        <div class="custombox11"> 
-          <p style="text-align: center;"><a class="cta-link" href="./pink_storm_23.html">        </a></p>
-        </div>
-        <div class="custombox11" > 
-          <p style="text-align: center;"><a class="cta-link" href="./pink_storm_23.html">Pink Storm XXIII</a></p>
-        </div>
-        <div class="custombox11"> 
-          <p style="text-align: center;"><a class="cta-link" href="./ra_quan_tuyen_pink23.html">Ra quân tuyển Pink</a></p>
-        </div>
-        <div class="custombox11"> 
-          <p style="text-align: center;"><a class="cta-link" href="./sự_kiện_đồng hành_pink23.html">Sự kiện đồng hành </a></p>
-        </div>
-        <div class="custombox11"> 
-          <p style="text-align: center;"><a class="cta-link" href="./thư_mời_Pink23.html">Thư mời</a></p>
-        </div>
-        <div class="custombox11"> 
-          <p style="text-align: center;"><a class="cta-link" href="./tổng_kết_PS23.html">Tổng kết </a></p>
-        </div>
-        <div class="custombox11"> 
-          <p style="text-align: center;"><a class="cta-link" href="./trang_trí.html">Chuẩn bị</a></p>
-        </div>
-        <div class="custombox11"> 
-          <p style="text-align: center;"><a class="cta-link" href="./tri_ân_NHM.html">Tri ân NHM</a></p>
-        </div>
-        <div class="custombox11"> 
-          <p style="text-align: center;"><a class="cta-link" href="./BBC_LENS_LUCKY.html">BBC LENS LUCKY</a></p>
-        </div>
-        <div class="custombox11"> 
-          <p style="text-align: center;"><a class="cta-link" href="./BBC_LENS_ONLY.html">BBC LENS ONLY</a></p>
-        </div>
-        <div class="custombox11"> 
-          <p style="text-align: center;"><a class="cta-link" href="./BBC_LENS_SKY.html">BBC LENS SKY</a></p>
-        </div>
-        <div class="custombox11"style="background-color: #f0f0f000"> 
-          <p style="text-align: center;"><a class="cta-link" href="./BBC_LENS_SUNSHINE.html">BBC LENS SUNSHINE</a></p>
-        </div>
-        <div class="custombox11"> 
-          <p style="text-align: center;"><a class="cta-link" href="./pink_storm_23.html">      </a></p>
-        </div>
-      </div>
-    <div class="content">
-        <h1>SUNSHINE: RỰC RỠ MÙA HẠ</h1>
-        <h2>SỰ KIỆN ĐỒNG HÀNH - BBC LENS: HƯƠNG VỊ MÙA HÈ </h2>
-        <br>
-        <img src="https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/442464211_794067479503661_333171904711385553_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHEL3DNAf2dgow5q-dh5CfblGfYmsj8cYiUZ9iayPxxiGa62EA8wz4CXrxSh-YbEI0XEgFPAJ49IE7Gq9KWLB-z&_nc_ohc=S-XyOm_Jft4Q7kNvgGMBUeX&_nc_ht=scontent.fhan14-1.fna&oh=00_AYAApY0a_N80268qCi71sUYI0dT_NRnFITKYVhUV7l31zg&oe=6675AB26" alt="">
-        <br>
-        <p><i><ul>🌿“Dưới nắng hè, cây xanh tươi mơn mởn,</ul>
-            <ul>Hoa bằng lăng, khoe sắc tím dịu dàng.</ul>
-            <ul>Gió êm đềm, lá xanh lay nhè nhẹ,</ul>
-            <ul>Hè đến rồi, một mùa đầy yêu thương.”⛅️</ul></i></p>
-            <br>
-            <img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/442470862_794067569503652_5193104655160769803_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGjW0khoVDjoypYxK2vzbtod_aQ1PI7deR39pDU8jt15ITUrLK12zgPw5w_deMKoa74rP4UshTVWhH9gZbndAy9&_nc_ohc=1FMlWWA6-ZMQ7kNvgHaqj5-&_nc_ht=scontent.fhan14-2.fna&oh=00_AYC8jnuCHC74BabAhXp7LMPjWJVu1WIi2g_ZMN1IVJcEQA&oe=667592E2" alt="">
-            <br>
-            <p>🌻Nhắc đến mùa hè, các bạn sẽ nhắc đến điều gì? Những ánh nắng chói chang của mùa hạ, tiếng ve kêu râm ran trong vòm lá hay những chuyến đi nghỉ mát cùng gia đình?🏖
-            </p>
-            <p>☀️Đối với Sunshine chúng tớ, mùa hè như một bức tranh tươi sáng rực rỡ sắc màu. Tác phẩm ấy được vẽ bằng ánh nắng vàng óng ả của mặt trời, những hàng cây xanh rợp bóng mát, những cây hoa bằng lăng tím nở rộ và hơn hết đó là ngọn lửa nhiệt huyết của các tình nguyện viên áo đỏ. 🌺</p>
-            <br>
-            <img src="https://scontent.fhan14-5.fna.fbcdn.net/v/t39.30808-6/442509994_794067512836991_6109377753223374587_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFEUMbXTbL02srdmEOJpsZuZN5OPVL-9BFk3k49Uv70EaaqXws5fxN9nLLIorHhMs6kv4Q621aqSx2xuDdZT8gx&_nc_ohc=b_jVgZaMdQEQ7kNvgEYtNEy&_nc_ht=scontent.fhan14-5.fna&oh=00_AYCnLNVDj3wACHt86WuviALkK6O1fmiIgDsuaZzrWAbSOA&oe=667597D7" alt="">
-            <br>
-            <img src="https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/442478485_794067486170327_4045747610227682700_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeH1dzkdhB_tSE7pxbuPielvmTeuBqRTdc6ZN64GpFN1zh42XYepUO61tW3RhikNQGP0EfQesqYbXHD4IA9MZ-aQ&_nc_ohc=CkA-s0p735AQ7kNvgGnbgTp&_nc_ht=scontent.fhan14-1.fna&oh=00_AYCvXOOhWtkulMV5FcJczL2XFOq3dEbov-eWXIawp8Pkig&oe=6675B038" alt="">
+      display: inline-block;
+      background-color: #1f025600;
+      color: #fff;
+      text-decoration: none;
 
-          <br>
-          <img src="https://scontent.fhan14-4.fna.fbcdn.net/v/t39.30808-6/442467121_794067672836975_2464414602440722938_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEuDO6FXwxUZyyFJv8f7kif29Va_h5Turnb1Vr-HlO6uaZvkttjV3FwrvGb0wvmWf3bFMXOUWCD-ZhJGpqHc_yp&_nc_ohc=oTdAcIx5C-kQ7kNvgFxPS1d&_nc_ht=scontent.fhan14-4.fna&oh=00_AYCllw6gd_fTRJm5IHrdWfRBKq61CPL14AqwgYinJ49jzA&oe=6675A4D7" alt="">
-          <br>
-          <img src="https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-6/442477975_794067522836990_6919333411779078506_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEs3OTzJDbHBmbbZMatLxcuZL_SfjlUUGhkv9J-OVRQaDN5jlXlq0E8b-TP_kdR5hHUIVeolr73bBoubnaFKX2M&_nc_ohc=wRjq8H_dO-wQ7kNvgEEqFWg&_nc_ht=scontent.fhan14-3.fna&oh=00_AYBlA-t8syZn69vmfDGofgCAbtpZLLk-Q1pe4g6H2ESsaw&oe=6675945D" alt="">
-          <br>
-          <img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/442499249_794067632836979_978058531937540262_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHHBgGND3px25WIalo8erNBQ4-ObJ2d3ghDj45snZ3eCPPv3PwC_c5qocqJ2Z5lhnXCPdAoyuVXH0T4MOdq1jfz&_nc_ohc=YLhRE49E48IQ7kNvgGkBZKm&_nc_ht=scontent.fhan14-2.fna&oh=00_AYARE7T-Q36-k3zWBgXZLTfquBlH_VlvhbDf53H9iSOMtA&oe=6675BA8F" alt="">
-          <br>  
-          <p>🌈Mùa hè dù có nóng, có oi nhưng chắc chắn không thể sánh bằng tinh thần đoàn kết, cống hiến hết mình của những tia sáng Sunshine chúng tớ. Còn nếu các bạn muốn biết Sunshine cháy như thế nào thì hãy đến gặp chúng tớ vào 22/05 tại Ngày Hội hiến máu toàn trường_Pink Storm XXIII nhé!🔥🔥🔥</p>
-          <br>
-          
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+  </style>
 
+  <div class="custombox1">
+    <div class="custombox11">
+      <p style="text-align: center;"><a class="cta-link" href="./pink_storm_23.html"> </a></p>
     </div>
+    <div class="custombox11">
+      <p style="text-align: center;"><a class="cta-link" href="./pink_storm_23.html"> </a></p>
+    </div>
+    <div class="custombox11">
+      <p style="text-align: center;"><a class="cta-link" href="./pink_storm_23.html">Pink Storm XXIII</a></p>
+    </div>
+    <div class="custombox11">
+      <p style="text-align: center;"><a class="cta-link" href="./ra_quan_tuyen_pink23.html">Ra quân tuyển Pink</a></p>
+    </div>
+    <div class="custombox11">
+      <p style="text-align: center;"><a class="cta-link" href="./sự_kiện_đồng hành_pink23.html">Sự kiện đồng hành </a>
+      </p>
+    </div>
+    <div class="custombox11">
+      <p style="text-align: center;"><a class="cta-link" href="./thư_mời_Pink23.html">Thư mời</a></p>
+    </div>
+    <div class="custombox11">
+      <p style="text-align: center;"><a class="cta-link" href="./tổng_kết_PS23.html">Tổng kết </a></p>
+    </div>
+    <div class="custombox11">
+      <p style="text-align: center;"><a class="cta-link" href="./trang_trí.html">Chuẩn bị</a></p>
+    </div>
+    <div class="custombox11">
+      <p style="text-align: center;"><a class="cta-link" href="./tri_ân_NHM.html">Tri ân NHM</a></p>
+    </div>
+    <div class="custombox11">
+      <p style="text-align: center;"><a class="cta-link" href="./BBC_LENS_LUCKY.html">BBC LENS LUCKY</a></p>
+    </div>
+    <div class="custombox11">
+      <p style="text-align: center;"><a class="cta-link" href="./BBC_LENS_ONLY.html">BBC LENS ONLY</a></p>
+    </div>
+    <div class="custombox11">
+      <p style="text-align: center;"><a class="cta-link" href="./BBC_LENS_SKY.html">BBC LENS SKY</a></p>
+    </div>
+    <div class="custombox11" style="background-color: #f0f0f000">
+      <p style="text-align: center;"><a class="cta-link" href="./BBC_LENS_SUNSHINE.html">BBC LENS SUNSHINE</a></p>
+    </div>
+    <div class="custombox11">
+      <p style="text-align: center;"><a class="cta-link" href="./pink_storm_23.html"> </a></p>
+    </div>
+  </div>
+  <div class="content">
+    <h1>SUNSHINE: RỰC RỠ MÙA HẠ</h1>
+    <h2>SỰ KIỆN ĐỒNG HÀNH - BBC LENS: HƯƠNG VỊ MÙA HÈ </h2>
+    <br>
+    <img
+      src="https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/442464211_794067479503661_333171904711385553_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHEL3DNAf2dgow5q-dh5CfblGfYmsj8cYiUZ9iayPxxiGa62EA8wz4CXrxSh-YbEI0XEgFPAJ49IE7Gq9KWLB-z&_nc_ohc=S-XyOm_Jft4Q7kNvgGMBUeX&_nc_ht=scontent.fhan14-1.fna&oh=00_AYAApY0a_N80268qCi71sUYI0dT_NRnFITKYVhUV7l31zg&oe=6675AB26"
+      alt="">
+    <br>
+    <p><i>
+        <ul>🌿“Dưới nắng hè, cây xanh tươi mơn mởn,</ul>
+        <ul>Hoa bằng lăng, khoe sắc tím dịu dàng.</ul>
+        <ul>Gió êm đềm, lá xanh lay nhè nhẹ,</ul>
+        <ul>Hè đến rồi, một mùa đầy yêu thương.”⛅️</ul>
+      </i></p>
+    <br>
+    <img
+      src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/442470862_794067569503652_5193104655160769803_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGjW0khoVDjoypYxK2vzbtod_aQ1PI7deR39pDU8jt15ITUrLK12zgPw5w_deMKoa74rP4UshTVWhH9gZbndAy9&_nc_ohc=1FMlWWA6-ZMQ7kNvgHaqj5-&_nc_ht=scontent.fhan14-2.fna&oh=00_AYC8jnuCHC74BabAhXp7LMPjWJVu1WIi2g_ZMN1IVJcEQA&oe=667592E2"
+      alt="">
+    <br>
+    <p>🌻Nhắc đến mùa hè, các bạn sẽ nhắc đến điều gì? Những ánh nắng chói chang của mùa hạ, tiếng ve kêu râm ran trong
+      vòm lá hay những chuyến đi nghỉ mát cùng gia đình?🏖
+    </p>
+    <p>☀️Đối với Sunshine chúng tớ, mùa hè như một bức tranh tươi sáng rực rỡ sắc màu. Tác phẩm ấy được vẽ bằng ánh nắng
+      vàng óng ả của mặt trời, những hàng cây xanh rợp bóng mát, những cây hoa bằng lăng tím nở rộ và hơn hết đó là ngọn
+      lửa nhiệt huyết của các tình nguyện viên áo đỏ. 🌺</p>
+    <br>
+    <img
+      src="https://scontent.fhan14-5.fna.fbcdn.net/v/t39.30808-6/442509994_794067512836991_6109377753223374587_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFEUMbXTbL02srdmEOJpsZuZN5OPVL-9BFk3k49Uv70EaaqXws5fxN9nLLIorHhMs6kv4Q621aqSx2xuDdZT8gx&_nc_ohc=b_jVgZaMdQEQ7kNvgEYtNEy&_nc_ht=scontent.fhan14-5.fna&oh=00_AYCnLNVDj3wACHt86WuviALkK6O1fmiIgDsuaZzrWAbSOA&oe=667597D7"
+      alt="">
+    <br>
+    <img
+      src="https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/442478485_794067486170327_4045747610227682700_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeH1dzkdhB_tSE7pxbuPielvmTeuBqRTdc6ZN64GpFN1zh42XYepUO61tW3RhikNQGP0EfQesqYbXHD4IA9MZ-aQ&_nc_ohc=CkA-s0p735AQ7kNvgGnbgTp&_nc_ht=scontent.fhan14-1.fna&oh=00_AYCvXOOhWtkulMV5FcJczL2XFOq3dEbov-eWXIawp8Pkig&oe=6675B038"
+      alt="">
+
+    <br>
+    <img
+      src="https://scontent.fhan14-4.fna.fbcdn.net/v/t39.30808-6/442467121_794067672836975_2464414602440722938_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEuDO6FXwxUZyyFJv8f7kif29Va_h5Turnb1Vr-HlO6uaZvkttjV3FwrvGb0wvmWf3bFMXOUWCD-ZhJGpqHc_yp&_nc_ohc=oTdAcIx5C-kQ7kNvgFxPS1d&_nc_ht=scontent.fhan14-4.fna&oh=00_AYCllw6gd_fTRJm5IHrdWfRBKq61CPL14AqwgYinJ49jzA&oe=6675A4D7"
+      alt="">
+    <br>
+    <img
+      src="https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-6/442477975_794067522836990_6919333411779078506_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEs3OTzJDbHBmbbZMatLxcuZL_SfjlUUGhkv9J-OVRQaDN5jlXlq0E8b-TP_kdR5hHUIVeolr73bBoubnaFKX2M&_nc_ohc=wRjq8H_dO-wQ7kNvgEEqFWg&_nc_ht=scontent.fhan14-3.fna&oh=00_AYBlA-t8syZn69vmfDGofgCAbtpZLLk-Q1pe4g6H2ESsaw&oe=6675945D"
+      alt="">
+    <br>
+    <img
+      src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/442499249_794067632836979_978058531937540262_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHHBgGND3px25WIalo8erNBQ4-ObJ2d3ghDj45snZ3eCPPv3PwC_c5qocqJ2Z5lhnXCPdAoyuVXH0T4MOdq1jfz&_nc_ohc=YLhRE49E48IQ7kNvgGkBZKm&_nc_ht=scontent.fhan14-2.fna&oh=00_AYARE7T-Q36-k3zWBgXZLTfquBlH_VlvhbDf53H9iSOMtA&oe=6675BA8F"
+      alt="">
+    <br>
+    <p>🌈Mùa hè dù có nóng, có oi nhưng chắc chắn không thể sánh bằng tinh thần đoàn kết, cống hiến hết mình của những
+      tia sáng Sunshine chúng tớ. Còn nếu các bạn muốn biết Sunshine cháy như thế nào thì hãy đến gặp chúng tớ vào 22/05
+      tại Ngày Hội hiến máu toàn trường_Pink Storm XXIII nhé!🔥🔥🔥</p>
+    <br>
+
+
+  </div>
 </body>
+
 </html>
