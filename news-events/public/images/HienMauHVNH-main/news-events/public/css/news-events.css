@@ -1,0 +1,180 @@
+/* Global styles - unaffected by header specific styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+:root {
+  --themeRed: #e43a47;
+  --gray: #efefef;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif; /* Ensure consistent font */
+}
+
+p {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+
+/* Styles specific to the header */
+header {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  height: 75px;
+  line-height: 75px;
+}
+
+header .container {
+  width: 1140px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+header .container .inner-logo {
+  padding: 0;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+header .container .inner-logo img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto; /* Ensures the logo scales proportionally */
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+header ul li {
+  display: inline-block;
+  height: 100%;
+}
+
+header ul li a {
+  display: inline-block;
+  height: 100%;
+  line-height: 75px;
+  padding: 0 15px;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 16px;
+  color: #fff;
+  transition: background-color 0.3s;
+  justify-content: space-between;
+}
+
+header ul li a:hover {
+  background-color: var(--themeRed);
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Styles specific to the news section */
+.container.newsSection {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centering the items horizontally */
+}
+
+.newsItem {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 600px; /* Set a max-width for better readability */
+  background-color: #fff; /* Background color for better readability */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+.newsItem img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.newsContent {
+  margin-top: 10px;
+}
+
+.detailButton {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.detailButton:hover {
+  background-color: #0056b3;
+}
+
+.newsDetails {
+  display: none; /* Hidden by default */
+  margin-top: 10px;
+}
+
+.newsDetails p {
+  margin-bottom: 10px;
+}
+
+.register-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+/* Styles specific to the pagination */
+.paginationNav {
+  margin-top: 20px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center; /* Center the pagination */
+  margin-bottom: 20px;
+}
+
+.page-item.active .page-link {
+  background-color: var(--themeRed);
+  border-color: var(--themeRed);
+  color: #fff;
+}
+
+.page-link {
+  color: #007bff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.page-link:hover {
+  background-color: var(--themeRed);
+  color: #fff;
+}

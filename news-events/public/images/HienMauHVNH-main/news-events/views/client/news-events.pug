@@ -1,0 +1,74 @@
+doctype html
+html
+  head
+    title #{pageTitle}
+
+    link(rel="stylesheet" href="../css/reset.css")
+    link(rel="stylesheet" href="./css/news-events.css")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css")
+
+  body
+    header.header
+      .container
+        .row.align-items-center
+          .col-3
+            .inner-logo
+              img(src="/images/logo1.png", alt="logo")
+          .col-9
+            .inner-menu
+              ul
+                li
+                  a(href="/../../../home/home.html") Home
+                li
+                  a(href="/") News - Events
+
+    .container.newsSection
+      each newsItem in news
+        .newsItem
+          h3= newsItem.title
+          img(src=newsItem.thumbnail, alt=newsItem.title)
+          .newsContent
+            p= newsItem.description
+            button.detailButton(onclick=`toggleDetails('${newsItem.id}')`) Xem chi tiết
+            .newsDetails(id=newsItem.id style="display: none;")
+              p= newsItem.content
+              if newsItem.link
+                p
+                  a.register-link(href=newsItem.link, target="_blank") Đăng ký hiến máu
+
+    nav.paginationNav
+      ul(class="pagination justify-content-center")
+        if pagination.currentPage > 1
+          li(class="page-item")
+            button(
+              class="page-link"
+              data-pagination=pagination.currentPage - 1
+            ) Trang trước
+        
+        each i in [...Array(pagination.totalPage).keys()]
+          li(class=`page-item ${pagination.currentPage === (i + 1) ? "active" : ""}`)
+            button(
+              class="page-link"
+              data-pagination=i + 1
+            ) #{i + 1}
+
+        if pagination.currentPage < pagination.totalPage
+          li(class="page-item")
+            button(
+              class="page-link"
+              data-pagination=pagination.currentPage + 1
+            ) Kế tiếp
+
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")
+    script(src="../../js/news.js")
+    script.
+      function toggleDetails(id) {
+        var details = document.getElementById(id);
+        if (details.style.display === "none" || details.style.display === "") {
+          details.style.display = "block";
+        } else {
+          details.style.display = "none";
+        }
+      }
