@@ -1,4 +1,4 @@
-// news.js
+//Pagination
 
 document.addEventListener('DOMContentLoaded', () => {
     // Pagination
@@ -15,12 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   
-    // Toggle Details
-    window.toggleDetails = function(id) {
-      const detailsElement = document.getElementById(id);
-      if (detailsElement) {
-        detailsElement.classList.toggle('show');
       }
-    }
-  });
+);
+
   

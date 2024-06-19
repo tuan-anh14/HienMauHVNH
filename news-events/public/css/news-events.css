@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+/* Global styles - unaffected by header specific styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+:root {
+  --themeRed: #e43a47;
+  --gray: #efefef;
+}
 
 * {
   margin: 0;
@@ -12,12 +18,7 @@ html {
 }
 
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../team/images/bulubala.png);
-  background-size: cover;
-  background-position: center;
-  font-family: "Poppins", sans-serif;
-  margin: 0; /* Remove margin from body */
-  padding: 0; /* Remove padding from body */
+  font-family: "Poppins", sans-serif; /* Ensure consistent font */
 }
 
 p {
@@ -25,52 +26,55 @@ p {
   line-height: 26px;
 }
 
-.fullContainer {
-  width: 100%;
-}
 
-.container {
-  width: 1140px;
-  margin: auto;
-}
-
+/* Styles specific to the header */
 header {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  top: 0; /* Ensure header is at the top */
-  left: 0; /* Ensure header starts from the left */
   z-index: 2;
+  height: 75px;
+  line-height: 75px;
 }
 
 header .container {
+  width: 1140px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-header .container .logo {
-  padding: 15px 0;
-  height: 45px;
-}
-
-header .container .logo img {
   height: 100%;
 }
 
-header nav ul {
+header .container .inner-logo {
+  padding: 0;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+header .container .inner-logo img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto; /* Ensures the logo scales proportionally */
+}
+
+header ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
 }
 
-header nav ul li {
+header ul li {
   display: inline-block;
+  height: 100%;
 }
 
-header nav ul li a {
+header ul li a {
   display: inline-block;
-  height: 75px;
+  height: 100%;
   line-height: 75px;
   padding: 0 15px;
   text-decoration: none;
@@ -78,131 +82,99 @@ header nav ul li a {
   font-size: 16px;
   color: #fff;
   transition: background-color 0.3s;
+  justify-content: space-between;
 }
 
-header nav ul li a:hover {
-  background-color: #dc3545;
+header ul li a:hover {
+  background-color: var(--themeRed);
+  text-decoration: none;
+  color: #fff;
 }
 
-.banner {
-  padding: 20px 0;
-}
-
-.container {
-  width: 80%;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.newsSection {
+/* Styles specific to the news section */
+.container.newsSection {
+  margin-top: 20px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center; /* Centering the items horizontally */
 }
 
 .newsItem {
-  width: 75%;
-  height: 75%;
-  background: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 15px;
   margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 600px; /* Set a max-width for better readability */
+  background-color: #fff; /* Background color for better readability */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
 }
 
 .newsItem img {
   width: 100%;
   height: auto;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.newsItem h3 {
-  font-size: 18px; /* Adjust the font size for the title */
-  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 .newsContent {
-  text-align: left;
-}
-
-.newsContent p {
-  font-size: 14px; /* Adjust the font size for the description */
-  margin-bottom: 10px;
-}
-
-.newsDetails {
-  display: none;
   margin-top: 10px;
 }
 
 .detailButton {
-  background: #007bff;
-  color: #fff;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .detailButton:hover {
-  background: #0056b3;
+  background-color: #0056b3;
+}
+
+.newsDetails {
+  display: none; /* Hidden by default */
+  margin-top: 10px;
+}
+
+.newsDetails p {
+  margin-bottom: 10px;
 }
 
 .register-link {
   color: #007bff;
+  text-decoration: none;
 }
 
-
-/* news-events.css */
-.newsDetails {
-  display: none;
+.register-link:hover {
+  text-decoration: underline;
 }
 
-.newsDetails.show {
-  display: block;
+/* Styles specific to the pagination */
+.paginationNav {
+  margin-top: 20px;
 }
-
-
-/* news-events.css */
 
 .pagination {
-  margin-top: 20px; /* Khoảng cách từ phần trên xuống */
   display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
+  justify-content: center; /* Center the pagination */
+  margin-bottom: 20px;
 }
 
-.pagination .page-item {
-  margin-right: 5px; /* Khoảng cách giữa các nút pagination */
+.page-item.active .page-link {
+  background-color: var(--themeRed);
+  border-color: var(--themeRed);
+  color: #fff;
 }
 
-.pagination .page-item:last-child {
-  margin-right: 0;
+.page-link {
+  color: #007bff;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.pagination .page-link {
-  cursor: pointer;
-  border: none;
-  background: none;
-  color: #007bff; /* Màu chữ cho nút pagination */
-  padding: 8px 12px; /* Kích thước của nút pagination */
-  border-radius: 5px; /* Độ cong viền của nút pagination */
-  transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
-}
-
-.pagination .page-link:hover {
-  text-decoration: none;
-  background-color: #f8f9fa; /* Màu nền khi hover */
-}
-
-.pagination .page-item.active .page-link {
-  background-color: #007bff;
-  color: white;
-}
-
-.pagination .page-link:focus {
-  outline: none;
-  box-shadow: none;
+.page-link:hover {
+  background-color: var(--themeRed);
+  color: #fff;
 }

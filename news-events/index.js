@@ -1,27 +1,46 @@
 const express = require("express");
+const methodOverride = require("method-override");
 const path = require("path");
-const mongoose = require("mongoose");
-const app = express();
+const bodyParser = require("body-parser");
+
 const route = require("./routes/client/index.route");
-require('dotenv').config();
+const routeAdmin = require("./routes/admin/index.route");
+const database = require("./config/database");
+const systemConfig = require("./config/system");
+const flash = require("express-flash");
+const session = require("express-session")
+const cookieParser = require("cookie-parser")
 
-const database = require("./config/database")
+require("dotenv").config();
 
-database.connect()
+const app = express();
+const port = process.env.PORT;
 
-mongoose.connect(process.env.MONGO_URL)
-const PORT = process.env.PORT;
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Set the view engine to Pug
-app.set("view engine", "pug");
+app.use(methodOverride("_method"));
+
+database.connect();
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+
 app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
 
-// Serve static files
-app.use(express.static(path.join(__dirname, "public")));
+//Flash
+app.use(cookieParser("KNDSLFLLLJ"));
+app.use(session({ cookie: { maxAge: 60000 } }));
+app.use(flash());
+//End Flash
 
-// Use the news-events router
+// Route
 route(app);
+routeAdmin(app);
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+// App local variables
+app.locals.prefixAdmin = systemConfig.prefixAdmin;
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
 });
