@@ -18,13 +18,14 @@ html{
     scroll-behavior: smooth;
 }
 
+
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../team/images/bulubala.png)
+    background-image: linear-gradient(rgba(0, 0, 0, 0.736), rgba(0, 0, 0, 0.5)), url(../../team/images/bulubala.png)
     
 }
 
 button, body{
-    font-family: "Poppins", sans-serif;
+    font-family: "Helvetica", sans-serif;
 }
 
 p {
@@ -89,6 +90,7 @@ header .container {
 }
 
 header .container .logo{
+  
     padding: 15px 0;
     height: 45px;
 }
@@ -124,7 +126,8 @@ header nav ul li a:hover {
 .banner {
     min-height: 100vh;
     width: 100%;
-    background-image: url(./../images/banner.jpg);
+    background-image:linear-gradient(to right, rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.192)), url(./../images/banner.jpg);
+
     background-size: cover;
     background-attachment: fixed;
 }
@@ -142,18 +145,22 @@ header nav ul li a:hover {
 
 .banner h1 span {
     background-color: var(--themeRed);
-    display: inline-block;
+    display:block;
     line-height: 3.5 rem;
     padding: 0 15px;
+ 
     font-weight: 600;
     border-radius: 5px;
+    margin-right:  242px; /* Tăng giá trị này để giảm phần màu đỏ */
 }
 
 .banner p {
     color: #fff;
-    width: 50%;
+    width: 40%;
     text-shadow: 0 0 2px #000;
     margin-top: 10px;
+    font-size: 17px;
+
 }
 
 .banner button{
@@ -167,6 +174,7 @@ header nav ul li a:hover {
     border-radius: 3px;
     font-weight: 600;
 }
+
 /* Home style end */
 
 /* Introduce Section Start */
@@ -219,13 +227,12 @@ header nav ul li a:hover {
 
 #introduceSection .introduceMedia {
     flex: 1;
-    min-width: 300px;
+    width: 300px;
     text-align: center;
 }
 
-#introduceSection .introduceMedia img,
-#introduceSection .introduceMedia video {
-    max-width: 100%;
+#introduceSection .introduceMedia img {
+    max-width: 75%;
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -387,8 +394,8 @@ header nav ul li a:hover {
 }
 
 .programs .boxContainer .box .cardImage{
-    width: 100%;
-    height: 300px;
+    width: 200px;
+    height: 100%;
     background-position: center;
     background-size: cover;
     position: relative;
@@ -405,10 +412,9 @@ header nav ul li a:hover {
     position: absolute;
     left: 0;
     top: 0;
-    filter: grayscale(100%);
+
     transition: 0.4s;
 }
-
 
 .programs .boxContainer .box:nth-child(1) .cardImage1{
     width: 100%;
