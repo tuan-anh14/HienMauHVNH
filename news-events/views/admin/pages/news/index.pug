@@ -8,7 +8,7 @@ include ../../mixins/alert.pug
 
 block main
     +alert-success(5000)
-    h1 Danh sách sản phẩm
+    h1 Danh sách tin tức
 
     .card.mb-3
         .card-header Bộ lọc và Tìm kiếm
@@ -20,7 +20,7 @@ block main
                     +search(keyword)
 
     .card.mb-3
-        .card-header Danh sách sản phẩm
+        .card-header Danh sách tin tức
         .card-body
             .row    
               .col-8
@@ -41,7 +41,6 @@ block main
                         th STT
                         th Hình ảnh
                         th Tiêu đề
-                        th Giá
                         th Vị trí
                         th Trạng thái
                         th Hành động
