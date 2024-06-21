@@ -24,6 +24,7 @@ module.exports.index = async (req, res) => {
   objectPagination.totalPage = Math.ceil(countNews / objectPagination.limitItem);
 
   const news = await New.find(find)
+    .sort({ position: -1 })  
     .limit(objectPagination.limitItem)
     .skip(objectPagination.skip);
 
@@ -33,4 +34,3 @@ module.exports.index = async (req, res) => {
     pagination: objectPagination,
   });
 };
-

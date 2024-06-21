@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 const New = require("../../model/news.model");
 const filterStatusHelpers = require("../../helpers/filterStatus");
 const searchHelper = require("../../helpers/search");
@@ -50,48 +51,79 @@ module.exports.news = async (req, res) => {
 //[PATCH] /admin/news/change-status/:status/:id
 module.exports.changeStatus = async (req, res) => {
   const status = req.params.status;
-  const id = req.params.id;
+  const id = req.params.id.trim();
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    req.flash("error", "Invalid ObjectId");
+    return res.redirect("back");
+  }
 
   await New.updateOne({ _id: id }, { status });
 
   req.flash("success", "Cập nhật trạng thái thành công!");
-
   res.redirect("back");
 };
 
 //[PATCH] /admin/news/change-multi
 module.exports.changeMulti = async (req, res) => {
   const type = req.body.type;
-  const ids = req.body.ids.split(", ");
+  const ids = req.body.ids.split(", ").map((id) => id.trim());
+
+  // Check for valid ObjectIds
+  const invalidIds = ids.filter((id) => !mongoose.Types.ObjectId.isValid(id));
+  if (invalidIds.length > 0) {
+    req.flash("error", `Invalid ObjectIds: ${invalidIds.join(", ")}`);
+    return res.redirect("back");
+  }
 
   switch (type) {
     case "active":
       await New.updateMany({ _id: { $in: ids } }, { status: "active" });
-      req.flash("success", `Cập nhật trạng thái thành công ${ids.length} tin tức!`);
+      req.flash(
+        "success",
+        `Cập nhật trạng thái thành công ${ids.length} tin tức!`
+      );
       break;
 
     case "inactive":
       await New.updateMany({ _id: { $in: ids } }, { status: "inactive" });
-      req.flash("success", `Cập nhật trạng thái thành công ${ids.length} tin tức!`);
+      req.flash(
+        "success",
+        `Cập nhật trạng thái thành công ${ids.length} tin tức!`
+      );
       break;
 
     case "delete-all":
-      await New.updateMany({ _id: { $in: ids } }, { deleted: true, deletedAt: new Date() });
+      await New.updateMany(
+        { _id: { $in: ids } },
+        { deleted: true, deletedAt: new Date() }
+      );
       req.flash("success", `Đã xoá thành công ${ids.length} tin tức!`);
       break;
 
     case "change-position":
-      for (const item of ids) {
-        let [id, position] = item.split("-");
-        position = parseInt(position);
+      try {
+        for (const item of ids) {
+          let [id, position] = item.split("-");
+          position = parseInt(position);
 
-        await New.updateOne(
-          { _id: id },
-          {
-            position: position,
+          // Check if position is a valid number
+          if (isNaN(position)) {
+            req.flash("error", `Invalid position for id: ${id}`);
+            return res.redirect("back");
           }
-        );
+
+          await New.updateOne(
+            { _id: id },
+            {
+              position: position,
+            }
+          );
+        }
         req.flash("success", `Đổi vị trí thành công ${ids.length} tin tức!`);
+        res.status(200).json({ message: "Position updated successfully" });
+      } catch (error) {
+        res.status(500).json({ error: error.message });
       }
       break;
 
@@ -105,7 +137,12 @@ module.exports.changeMulti = async (req, res) => {
 
 //[DELETE] /admin/news/delete/:id
 module.exports.deleteItem = async (req, res) => {
-  const id = req.params.id;
+  const id = req.params.id.trim();
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    req.flash("error", "Invalid ObjectId");
+    return res.redirect("back");
+  }
 
   await New.updateOne(
     { _id: id },
@@ -115,10 +152,8 @@ module.exports.deleteItem = async (req, res) => {
     }
   );
   req.flash("success", `Đã xoá thành công tin tức!`);
-
   res.redirect("back");
 };
-
 
 //[GET] /admin/products/create
 module.exports.create = async (req, res) => {
@@ -129,13 +164,13 @@ module.exports.create = async (req, res) => {
 
 //[POST] /admin/news/create
 module.exports.createPost = async (req, res) => {
-  console.log(req.file)
+  console.log(req.file);
 
-  if (req.body.position == "") {
+  if (req.body.position === "") {
     const countProducts = await New.countDocuments();
     req.body.position = countProducts + 1;
   } else {
-    req.body.position == parseInt(req.body.position);
+    req.body.position = parseInt(req.body.position);
   }
 
   req.body.thumbnail = `/uploads/${req.file.filename}`;
