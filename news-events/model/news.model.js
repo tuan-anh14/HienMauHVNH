@@ -8,7 +8,13 @@ const newsSchema = new mongoose.Schema({
     thumbnail: String,
     status: String,
     position: Number,
-    deleted: Boolean
+    deleted: {
+        type: Boolean,
+        default: false
+    },
+    deleteAt: Date
+}, {
+    timestamps: true
 });
 
 const New = mongoose.model('New', newsSchema);

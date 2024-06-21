@@ -27,7 +27,7 @@ module.exports.index = async (req, res) => {
     .limit(objectPagination.limitItem)
     .skip(objectPagination.skip);
 
-  res.render("client/news-events", {
+  res.render("client/index", {
     pageTitle: "Tin tức - Sự kiện",
     news: news,
     pagination: objectPagination,

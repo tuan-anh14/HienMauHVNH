@@ -49,7 +49,8 @@ module.exports.news = async (req, res) => {
 
 //[PATCH] /admin/news/change-status/:status/:id
 module.exports.changeStatus = async (req, res) => {
-  const { status, id } = req.params;
+  const status = req.params.status;
+  const id = req.params.id;
 
   await New.updateOne({ _id: id }, { status });
 
@@ -60,31 +61,38 @@ module.exports.changeStatus = async (req, res) => {
 
 //[PATCH] /admin/news/change-multi
 module.exports.changeMulti = async (req, res) => {
-  const { type, ids } = req.body;
-  const idArray = ids.split(", ");
+  const type = req.body.type;
+  const ids = req.body.ids.split(", ");
 
   switch (type) {
     case "active":
-      await New.updateMany({ _id: { $in: idArray } }, { status: "active" });
-      req.flash("success", `Cập nhật trạng thái thành công ${idArray.length} tin tức!`);
+      await New.updateMany({ _id: { $in: ids } }, { status: "active" });
+      req.flash("success", `Cập nhật trạng thái thành công ${ids.length} tin tức!`);
       break;
 
     case "inactive":
-      await New.updateMany({ _id: { $in: idArray } }, { status: "inactive" });
-      req.flash("success", `Cập nhật trạng thái thành công ${idArray.length} tin tức!`);
+      await New.updateMany({ _id: { $in: ids } }, { status: "inactive" });
+      req.flash("success", `Cập nhật trạng thái thành công ${ids.length} tin tức!`);
       break;
 
     case "delete-all":
-      await New.updateMany({ _id: { $in: idArray } }, { deleted: true, deletedAt: new Date() });
-      req.flash("success", `Đã xoá thành công ${idArray.length} tin tức!`);
+      await New.updateMany({ _id: { $in: ids } }, { deleted: true, deletedAt: new Date() });
+      req.flash("success", `Đã xoá thành công ${ids.length} tin tức!`);
       break;
 
     case "change-position":
-      for (const item of idArray) {
-        const [id, position] = item.split("-");
-        await New.updateOne({ _id: id }, { position: parseInt(position) });
+      for (const item of ids) {
+        let [id, position] = item.split("-");
+        position = parseInt(position);
+
+        await New.updateOne(
+          { _id: id },
+          {
+            position: position,
+          }
+        );
+        req.flash("success", `Đổi vị trí thành công ${ids.length} tin tức!`);
       }
-      req.flash("success", `Đổi vị trí thành công ${idArray.length} tin tức!`);
       break;
 
     default:
@@ -97,30 +105,37 @@ module.exports.changeMulti = async (req, res) => {
 
 //[DELETE] /admin/news/delete/:id
 module.exports.deleteItem = async (req, res) => {
-  const { id } = req.params;
+  const id = req.params.id;
 
-  await New.updateOne({ _id: id }, { deleted: true, deletedAt: new Date() });
-  req.flash("success", "Đã xoá thành công tin tức!");
+  await New.updateOne(
+    { _id: id },
+    {
+      deleted: true,
+      deletedAt: new Date(),
+    }
+  );
+  req.flash("success", `Đã xoá thành công tin tức!`);
 
   res.redirect("back");
 };
 
-//[GET] /admin/news/create
+
+//[GET] /admin/products/create
 module.exports.create = async (req, res) => {
   res.render("admin/pages/news/create.pug", {
-    pageTitle: "Thêm mới tin tức",
+    pageTitle: "Thêm mới sản phẩm",
   });
 };
 
 //[POST] /admin/news/create
 module.exports.createPost = async (req, res) => {
-  console.log(req.file);
+  console.log(req.file)
 
-  if (req.body.position === "") {
-    const countNews = await New.countDocuments();
-    req.body.position = countNews + 1;
+  if (req.body.position == "") {
+    const countProducts = await New.countDocuments();
+    req.body.position = countProducts + 1;
   } else {
-    req.body.position = parseInt(req.body.position);
+    req.body.position == parseInt(req.body.position);
   }
 
   req.body.thumbnail = `/uploads/${req.file.filename}`;

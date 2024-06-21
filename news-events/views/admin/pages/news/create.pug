@@ -27,7 +27,25 @@ block main
             name="description"
             rows="5"
           )
-       
+
+        div(class="form-group")
+          label(for="content") Nội dung
+          textarea(
+            class="form-control"
+            id="content"
+            name="content"
+            rows="5"
+          )
+
+        div(class="form-group")
+          label(for="link") Link
+          input(
+            type="text"
+            class="form-control"
+            id="link"
+            name="link"
+            required
+          )  
         
         div(
           class="form-group"
@@ -85,3 +103,6 @@ block main
                 type="submit"
                 class="btn btn-primary"
             ) Tạo mới
+
+
+        script(src="/admin/js/news.js")
