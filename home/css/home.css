@@ -1,5 +1,3 @@
-/* Common style start */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   --themeRed: #e43a47;
@@ -82,50 +80,50 @@ section {
 
 /* Home style start */
 
-header {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  z-index: 2;
-}
+  header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    z-index: 2;
+  }
 
-header .container {
-  display: flex;
-  justify-content: space-between;
-}
+  header .container {
+    display: flex;
+    justify-content: space-between;
+  }
 
-header .container .logo {
-  padding: 15px 0;
-  height: 45px;
-}
+  header .container .logo {
+    padding: 15px 0;
+    height: 45px;
+  }
 
-header .container .logo img {
-  height: 100%;
-}
+  header .container .logo img {
+    height: 100%;
+  }
 
-header nav ul {
-  list-style-type: none;
-}
+  header nav ul {
+    list-style-type: none;
+  }
 
-header nav ul li {
-  display: inline-block;
-}
+  header nav ul li {
+    display: inline-block;
+  }
 
-header nav ul li a {
-  display: inline-block;
-  height: 75px;
-  line-height: 75px;
-  padding: 0 15px;
-  text-decoration: none;
-  text-transform: capitalize;
-  font-size: 16px;
-  color: #fff;
-  transition: 0.3s;
-}
+  header nav ul li a {
+    display: inline-block;
+    height: 75px;
+    line-height: 75px;
+    padding: 0 15px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: #fff;
+    transition: 0.3s;
+  }
 
-header nav ul li a:hover {
-  background-color: var(--themeRed);
-}
+  header nav ul li a:hover {
+    background-color: var(--themeRed);
+  }
 
 .banner {
   min-height: 100vh;
